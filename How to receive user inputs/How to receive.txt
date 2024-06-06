@@ -1,0 +1,30 @@
+Em HTML você cria um input, um label, texto e um botão para receber o submit do usuário, siga os exemplos:
+
+<label>Username: </label>
+<input id="myText"><br><br>
+<button id="mySubmit">submit</button>
+
+`Username` é o label do input, ou seja vem antes do mesmo para explicar ao usuário o que deve ser escrito nele.
+
+Logo em seguida declaro a caixa de input aderiando a ela o id "myText", para eu poder acha-lá no JS, onde o usuário digita. (<br><br> Para quebrar linhas)
+
+E por fim, o botão cujo id é "mySubmit" que envia o submit para o back-end,
+
+----------------------------- JS
+
+let username;
+
+document.getElementById("mySubmit").onclick = function(){
+    username = document.getElementById("myText").value;
+    console.log(username);
+
+    document.getElementById("myH1").textContent = `Hello ${username}`;
+}
+
+Aqui digo ao navegador que quando ocorrer o click do botão eu pego o valor escrito na caixa de input, faço um log com ela para facilitar o debug e por fim mudo o meu H1 de "Welcome" para: "Hello (username" usando ${} como placeholder.
+
+Atenção !!!!!!!!!!
+
+Lembre de usar crazes!!!
+
+Anexos na pasta.
