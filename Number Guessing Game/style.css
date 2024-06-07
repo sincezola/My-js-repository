@@ -1,0 +1,59 @@
+/* Garante que o body e html ocupem 100% da altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    position: relative; /* Adiciona posicionamento relativo para o posicionamento absoluto do botão */
+}
+
+/* Estiliza a div #container */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: calc(100% - 80px); /* Altura ajustada para deixar espaço para o botão */
+}
+
+/* Estiliza o texto de vitória */
+#winText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estiliza o container do botão */
+#buttonContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estiliza o texto de vitória */
+#winText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    position: absolute; /* Posicionamento absoluto */
+    bottom: 20px; /* Distância de 20px do fundo */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+
+/* Estiliza o botão #startButton */
+#startButton {
+    width: 500px; /* Ocupa toda a largura do container */
+    height: 60px; /* Ajuste a altura conforme necessário */
+    font-size: 2.5em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-family: Helvetica;
+    padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+    background-color: #0374e6;
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover para o botão */
+#startButton:hover {
+    background-color: #01376d;
+}

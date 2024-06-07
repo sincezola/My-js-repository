@@ -1,0 +1,3 @@
+Os operadores ternários em JavaScript são expressões condicionais que permitem escrever código mais conciso em comparação com as estruturas `if` e `else`.
+Eles consistem em três partes: uma condição seguida por um ponto de interrogação (`?`), uma expressão a ser avaliada se a condição for verdadeira, e uma expressão a ser avaliada se a condição for falsa, separadas por dois pontos (`:`).
+Por exemplo, `condição ? expressãoVerdadeira : expressãoFalsa`. Eles são úteis para atribuir valores com base em condições, tornando o código mais legível e sucinto.
