@@ -1,0 +1,9 @@
+Um callback em JavaScript é uma função passada como argumento para outra função, que é então executada dentro da função externa para completar algum tipo de rotina ou ação. Vamos ver um exemplo básico usando setTimeout, que é uma função assíncrona que aceita um callback.
+
+// Função callback
+function saudacao() {
+  console.log("Olá! Esta mensagem é exibida após 3 segundos.");
+}
+
+// setTimeout recebe a função saudacao como callback e espera 3000 milissegundos (3 segundos) para executá-la
+setTimeout(saudacao, 3000);

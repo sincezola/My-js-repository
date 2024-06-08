@@ -1,0 +1,5 @@
+•     `callback`: Função que é chamada para cada elemento do array. Recebe três argumentos:
+	   •     `element`: O elemento atual sendo processado no array.
+	   •     `index` (opcional): O índice do elemento atual sendo processado no array.
+	   •     `array` (opcional): O array original no qual filter() foi chamado.
+•     `thisArg` (opcional): Valor a ser usado como this quando a função de callback é executada.
