@@ -1,0 +1,46 @@
+Em JavaScript, a palavra-chave `extends` é usada para criar uma classe que herda de outra classe. Isso permite que a classe filha (ou subclasse) herde propriedades e métodos da classe pai (ou superclasse), facilitando a reutilização de código e promovendo a herança.
+
+Vamos examinar a sintaxe e como `extends` funciona com um exemplo prático:
+
+------------------------------------------------------------------
+
+class ParentClass {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name}`;
+  }
+}
+
+class ChildClass extends ParentClass {
+  constructor(name, age) {
+    super(name); // Chama o construtor da classe pai
+    this.age = age;
+  }
+
+  greet() {
+    return `${super.greet()} and I am ${this.age} years old`; // Usa o método da classe pai
+  }
+}
+
+// Criando uma instância da classe filha
+const child = new ChildClass('Alice', 30);
+console.log(child.greet()); // "Hello, my name is Alice and I am 30 years old"
+
+------------------------------------------------------------------
+
+Explicação dos Componentes:
+  1. Classe Pai (ParentClass): Esta é a classe original que contém propriedades e métodos que podem ser herdados.
+
+  2. Classe Filha (ChildClass): Esta é a nova classe que herda da         `ParentClass` usando a palavra-chave `extends`.
+
+  3. Construtor da Classe Pai (`super()`): Dentro do construtor da   classe filha, a função `super()` é usada para chamar o construtor da classe pai. Isso é necessário para inicializar as propriedades herdadas da classe pai.
+
+4. Método da Classe Pai (`super.method()`): A palavra-chave `super` também pode ser usada para chamar métodos da classe pai dentro da classe filha.
+Detalhes Adicionais:
+Herança de Propriedades e Métodos: Todas as propriedades e métodos da classe pai são herdados pela classe filha. A classe filha pode sobrepor (override) os métodos da classe pai se necessário.
+Propriedades e Métodos Próprios: A classe filha pode ter suas próprias propriedades e métodos além dos herdados.
+
+Imagens na pasta.
