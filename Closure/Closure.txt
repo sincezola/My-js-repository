@@ -1,0 +1,47 @@
+Uma closure (ou "clausura") em JavaScript é uma função que "lembra" do ambiente léxico no qual foi criada. Em termos mais simples, uma closure é uma função que retém acesso às variáveis do seu escopo exterior mesmo após o escopo exterior ter terminado sua execução.
+
+Como Funciona
+Quando uma função é definida dentro de outra função, a função interna tem acesso às variáveis da função externa. Essa relação cria uma closure.
+
+Exemplo Básico:
+
+---------------------------------------------------------------------------
+
+
+function outerFunction() {
+    let outerVariable = 'Eu sou uma variável da função externa';
+
+    function innerFunction() {
+        console.log(outerVariable); // Acessa a variável da função externa
+    }
+
+    return innerFunction;
+}
+
+const closureExample = outerFunction();
+closureExample(); // Saída: "Eu sou uma variável da função externa"
+
+---------------------------------------------------------------------------
+
+Neste exemplo:
+
+•  `outerFunction` é uma função externa que define uma variável `outerVariable`.
+•  `innerFunction` é uma função interna que acessa `outerVariable`.
+•  `outerFunction` retorna `innerFunction`.
+
+• Quando `closureExample` é chamado, ele ainda tem acesso a `outerVariable` mesmo após a execução de `outerFunction`.
+
+		Benefícios das Closures
+1. Encapsulamento:
+
+    •   As closures permitem encapsular o estado em uma função, protegendo 	variáveis de serem acessadas ou modificadas de fora do seu escopo.
+
+2. Funções Privadas:
+
+    •   Closures podem ser usadas para criar funções e variáveis privadas.
+
+3. Funções Factory:
+
+    •	Permitem criar funções que geram outras funções configuradas de forma 	personalizada.
+
+Imagens na Pasta
