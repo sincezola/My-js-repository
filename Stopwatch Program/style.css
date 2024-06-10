@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(0, 0%, 50%, 0.904)080;
+}
+
+#myH1{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsla(0, 0%, 0%, 0.699);
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#display{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 30);
+    color: rgb(90, 89, 89);
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0);
+    margin-bottom: 25px;
+}
+
+#controls button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+#startBtn{
+    background-color: hsl(120, 88%, 66%);
+}
+
+#startBtn:hover{
+    background-color: hsla(120, 88%, 66%, 0.664);
+}
+
+#stopBtn{
+    background-color: hsl(342, 86%, 59%);
+}
+
+#stopBtn:hover{
+    background-color: hsla(342, 86%, 59%, 0.664);
+}
+
+#resetBtn{
+    background-color: hsl(197, 83%, 68%);
+}
+
+#resetBtn:hover{
+    background-color: hsla(197, 83%, 68%, 0.664);
+}
