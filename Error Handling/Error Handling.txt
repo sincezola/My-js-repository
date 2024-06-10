@@ -1,0 +1,15 @@
+Tratativas de erro em JavaScript permitem que você lide com erros de maneira controlada, mantendo a robustez e a estabilidade do seu código. A principal forma de tratar erros em JavaScript é utilizando try...catch e, opcionalmente, finally. Além disso, você pode lançar erros personalizados usando throw
+
+---------------------------------------------------------------------
+
+try {
+    // Código que pode lançar um erro
+} catch (error) {
+    // Código para lidar com o erro
+} finally {
+    // Código que será executado sempre, independentemente de um erro ocorrer ou não
+}
+
+---------------------------------------------------------------------
+
+Imagens na Pasta.
