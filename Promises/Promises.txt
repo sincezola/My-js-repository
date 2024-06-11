@@ -1,0 +1,163 @@
+Promessas (`Promises`) em JavaScript são uma maneira de lidar com operações assíncronas de forma mais elegante e organizada, comparada aos tradicionais callbacks. Elas representam um valor que pode estar disponível agora, no futuro ou nunca. As Promises ajudam a evitar o chamado "callback hell" (aninhamento excessivo de callbacks) e tornam o código mais legível e gerenciável.
+
+Conceitos Básicos
+
+Uma Promise pode estar em um dos três estados:
+
+ 1. Pending (Pendente): Estado inicial, ainda não foi resolvida nem rejeitada.
+
+ 2. Fulfilled (Resolvida): A operação foi concluída com sucesso.
+
+ 3. Rejected (Rejeitada): A operação falhou.
+
+
+Criando uma Promise
+
+Você pode criar uma Promise usando o construtor `Promisse`, que aceita uma função com dois parâmetros: `resolve` e `reject`. Esses parâmetros são funções que você chama para alterar o estado da Promise.
+
+----------------------------------------------------------------------------
+
+let myPromise = new Promise((resolve, reject) => {
+    let success = true;
+
+    if (success) {
+        resolve("A operação foi bem-sucedida!");
+    } else {
+        reject("A operação falhou.");
+    }
+});
+
+----------------------------------------------------------------------------
+
+Consumindo uma Promise
+
+Para consumir uma Promise, você usa os métodos `then`, `catch` e `finally`.
+
+• `then(onFulfilled, onRejected)`: Registra callbacks para o caso de sucesso ou falha.
+• `catch(onRejected)`: Registra um callback para o caso de falha.
+• `finally(onFinally)`: Registra um callback a ser executado independentemente do resultado.
+
+Exemplo com then e `catch`
+
+----------------------------------------------------------------------------
+
+myPromise.then((message) => {
+    console.log("Success: " + message);
+}).catch((error) => {
+    console.error("Error: " + error);
+});
+
+----------------------------------------------------------------------------
+
+Exemplo com `finally`
+
+----------------------------------------------------------------------------
+
+myPromise.then((message) => {
+    console.log("Success: " + message);
+}).catch((error) => {
+    console.error("Error: " + error);
+}).finally(() => {
+    console.log("This will always execute.");
+});
+
+----------------------------------------------------------------------------
+
+Encadeamento de Promises
+
+Um dos principais benefícios das Promises é a capacidade de encadear operações assíncronas de forma linear.
+
+----------------------------------------------------------------------------
+
+let promiseChain = new Promise((resolve, reject) => {
+    resolve(10);
+});
+
+promiseChain.then((value) => {
+    console.log(value); // 10
+    return value * 2;
+}).then((value) => {
+    console.log(value); // 20
+    return value * 3;
+}).then((value) => {
+    console.log(value); // 60
+}).catch((error) => {
+    console.error("Error: " + error);
+});
+
+----------------------------------------------------------------------------
+
+Promise.all
+
+`Promise.all` é usado para executar múltiplas Promises em paralelo e aguardar até que todas sejam resolvidas ou qualquer uma seja rejeitada.
+
+----------------------------------------------------------------------------
+
+let promise1 = Promise.resolve(3);
+let promise2 = 42;
+let promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+    console.log(values); // [3, 42, "foo"]
+});
+
+----------------------------------------------------------------------------
+
+Promise.race
+
+`Promise.race` retorna uma Promise que resolve ou rejeita assim que uma das Promises fornecidas resolve ou rejeita.
+
+----------------------------------------------------------------------------
+
+let promise1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, 'one');
+});
+
+let promise2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+    console.log(value); // "two"
+});
+
+----------------------------------------------------------------------------
+
+Async/Await
+
+A sintaxe `async` e `await` é uma maneira mais moderna e simplificada de trabalhar com Promises. Uma função `async` retorna uma Promise, e a expressão `await` pausa a execução da função `async` até que a Promise seja resolvida ou rejeitada.
+
+Exemplo usando Async/Await
+
+
+
+async function asyncFunction() {
+    try {
+        let result = await myPromise;
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    } finally {
+        console.log("This will always execute.");
+    }
+}
+
+asyncFunction();
+
+
+
+------------------------------------ RESUMO ------------------------------------
+
+
+• Promises são uma maneira de lidar com operações assíncronas em JavaScript.
+• Estados: `pending`, `fulfilled`, `rejected`.
+• Métodos: `then`, `catch`, `finally` para consumir Promises.
+• Encadeamento: Permite operações assíncronas sequenciais.
+• `Promise.all` e `Promise.race`: Para gerenciar múltiplas Promises.
+• Async/Await: Sintaxe simplificada para trabalhar com Promises.
+
+Promises são uma ferramenta poderosa para lidar com assincronismo em JavaScript, tornando o código mais limpo e fácil de entender.
+
+IMAGENS NA PASTA!!
