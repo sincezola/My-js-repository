@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "indent": ["error", 2],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "no-console": "warn",
+        "no-unused-vars": "warn",
+        "max-len": ["error", { "code": 100 }]
+    }     
+}
