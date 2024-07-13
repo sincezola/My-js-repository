@@ -71,7 +71,7 @@
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Consolas",
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin  \\bash.exe"
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin  \\bash.exe",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
