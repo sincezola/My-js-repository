@@ -1,0 +1,5 @@
+export PROJECTS_DIR="/mnt/c/Users/enzo2/Documents/MyProjects"
+PS1='[\u@\h:${PWD/#$PROJECTS_DIR/\$PROJECTS_DIR}]\$ '
+export PS1='\u@\h:\W\$ '
+PS1='\[\033[0;32m\]\u@\h:\[\033[0;33m\]\W\[\033[0m\]\$ '
+PS2='\[\033[0;36m\]> \[\033[0m\]'
