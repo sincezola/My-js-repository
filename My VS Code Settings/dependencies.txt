@@ -1,0 +1,13 @@
+------------------ TERMINAL ------------------ 
+
+	     Terminal - WSL - Ubuntu 
+
+
+------------------ Extensions ------------------
+		Theme - Min theme
+	        Icons - Symbols
+		APC Customize UI++
+
+-------
+
+Cole todas as configs no json de configuração a workspace do vscode. 

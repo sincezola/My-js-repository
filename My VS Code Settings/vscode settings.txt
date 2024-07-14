@@ -97,7 +97,15 @@
     },
     "update.mode": "start",
     "terminal.integrated.gpuAcceleration": "off",
-    "terminal.integrated.defaultProfile.osx": "fish",
+
+      "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+      "terminal.integrated.profiles.windows": {
+        "WSL": {
+          "source": "Git Bash",
+          "icon": "terminal-linux"
+        }
+      },
+      "terminal.integrated.shellArgs.windows": ["~", "-c", "zsh"],
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
