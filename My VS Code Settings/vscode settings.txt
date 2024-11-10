@@ -1,26 +1,41 @@
 {
+    "workbench.startupEditor": "newUntitledFile",
     "editor.fontSize": 14,
     "editor.lineHeight": 1.8,
     "javascript.suggest.autoImports": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+      80,
+      120
+    ],
     "extensions.ignoreRecommendations": true,
     "typescript.tsserver.log": "off",
+    "editor.stickyScroll.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
     "files.associations": {
       ".env.*": "dotenv",
       ".prettierrc": "json",
-      "*.css": "css"
+      "*.css": "css",
+      ".dev.vars": "dotenv"
     },
     "symbols.files.associations": {
       "*.module.ts": "nest",
       "*.guard.ts": "typescript",
       "*.spec.ts": "ts-test",
       "*.e2e-spec.ts": "ts-test",
+      "*.mock.ts": "ts-test",
       "vitest.config.e2e.ts": "vite",
+      ".env.development.local": "gear",
+      ".env.test.local": "gear",
+      ".env.local": "gear",
       ".env.example": "gear"
     },
     "tailwindCSS.experimental.classRegex": [
-      ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+      [
+        "tv\\(([^)]*)\\)",
+        "[\"'`]([^\"'`]*).*?[\"'`]"
+      ],
+      "class:\\s*?[\"'`]([^\"'`]*).*?,"
     ],
     "editor.parameterHints.enabled": false,
     "editor.renderLineHighlight": "gutter",
@@ -34,16 +49,19 @@
       "editor.formatOnSave": true
     },
     "typescript.suggest.autoImports": true,
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
     "terminal.integrated.env.osx": {
       "FIG_NEW_SESSION": "1"
     },
     "workbench.editor.labelFormat": "short",
     "editor.fontLigatures": true,
     "emmet.includeLanguages": {
-      "javascript": "javascriptreact"
+      "javascript": "javascriptreact",
+      "mdx": "javascriptreact"
     },
     "emmet.syntaxProfiles": {
-      "javascript": "jsx"
+      "javascript": "jsx",
+      "mdx": "jsx"
     },
     "cSpell.enableFiletypes": [
       "!asciidoc",
@@ -71,7 +89,6 @@
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin  \\bash.exe",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     },
@@ -82,6 +99,7 @@
     ],
     "editor.semanticHighlighting.enabled": false,
     "breadcrumbs.enabled": false,
+    "workbench.productIconTheme": "fluent-icons",
     "editor.fontFamily": "JetBrains Mono",
     "gitlens.codeLens.authors.enabled": false,
     "editor.tabSize": 2,
@@ -95,23 +113,23 @@
       ".vscode": true
       // "node_modules": true
     },
-    "update.mode": "start",
-    "terminal.integrated.gpuAcceleration": "off",
-
-      "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
-      "terminal.integrated.profiles.windows": {
-        "WSL": {
-          "source": "Git Bash",
-          "icon": "terminal-linux"
-        }
-      },
-      "terminal.integrated.shellArgs.windows": ["~", "-c", "zsh"],
+    "workbench.iconTheme": "symbols",
+    "update.mode": "manual",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.defaultProfile.osx": "zsh",
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[json]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "terminal.integrated.profiles.windows": {
+      "WSL": {
+        "source": "Git Bash",
+        "icon": "terminal-linux"
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
     "window.commandCenter": false,
     "git.openRepositoryInParentFolders": "always",
     "symbols.hidesExplorerArrows": false,
@@ -132,13 +150,14 @@
     },
     "editor.hideCursorInOverviewRuler": true,
     "editor.minimap.enabled": false,
-    "window.titleBarStyle": "native",
     "apc.electron": {
       "titleBarStyle": "hiddenInset",
       "trafficLightPosition": {
         "x": 11,
         "y": 10
       },
+      "opacity": 1,
+      "vibrancy": "dark",
       "frame": false
     },
     "apc.header": {
@@ -161,17 +180,19 @@
     "editor.scrollbar.vertical": "hidden",
     "explorer.sortOrder": "foldersNestsFiles",
     "explorer.fileNesting.patterns": {
-      "package.json": ".eslint*, .prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*",
-      "tailwind.config.js": "tailwind.config*, postcss.config*",
+      "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
+      "tailwind.config.*": "tailwind.config*, postcss.config*",
       ".env.local": ".env*",
       ".env": ".env*"
     },
     "explorer.fileNesting.enabled": true,
     "cSpell.userWords": [
+      "automations",
       "bootcamp",
       "chakra",
       "checkin",
       "checkins",
+      "cloudflare",
       "clsx",
       "Codegen",
       "datadog",
@@ -184,12 +205,15 @@
       "Fastify",
       "feedbackwidget",
       "ffprobe",
+      "gamificada",
       "Hasher",
+      "hono",
       "Hono",
       "ilike",
       "IUGU",
       "jamjuree",
       "jupiter",
+      "ksuid",
       "liveblocks",
       "LIVEBLOCKS",
       "Marguerita",
@@ -197,6 +221,7 @@
       "mixpanel",
       "monaco",
       "nestjs",
+      "nivo",
       "omni",
       "Omni",
       "Onboarded",
@@ -205,6 +230,7 @@
       "postgresql",
       "prefetch",
       "reactflow",
+      "retriable",
       "roboto",
       "rocketseat",
       "rotion",
@@ -229,8 +255,33 @@
       "unmark",
       "upsert",
       "Usuario",
+      "webm",
       "WEBPUSH"
     ],
-    "workbench.colorTheme": "Min Dark",
-    "workbench.statusBar.visible": false
+    "workbench.statusBar.visible": false,
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": "keyword.other.dotenv",
+          "settings": {
+            "foreground": "#FF000000"
+          }
+        }
+      ]
+    },
+    "workbench.layoutControl.enabled": false,
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "poimandres",
+    "workbench.preferredLightColorTheme": "Min Light",
+    "gitlens.advanced.messages": {
+      "suppressIntegrationRequestTimedOutWarning": true
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "remote.SSH.remotePlatform": {
+      "*.gitpod.io": "linux"
+    },
+    "window.menuBarVisibility": "compact",
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.linkedEditing": true
   }

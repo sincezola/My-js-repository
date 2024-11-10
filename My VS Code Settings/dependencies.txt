@@ -10,4 +10,4 @@
 
 -------
 
-Cole todas as configs no json de configuração a workspace do vscode. 
+Cole todas as configs no json de configuração do "User" do vs code. 
