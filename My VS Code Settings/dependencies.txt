@@ -1,13 +1,11 @@
 ------------------ TERMINAL ------------------ 
 
-	     Terminal - WSL - Ubuntu 
-
+	  Terminal - WSL - Ubuntu - Zsh
 
 ------------------ Extensions ------------------
 		Theme - Min theme
 	        Icons - Symbols
 		APC Customize UI++
-
 -------
 
 Cole todas as configs no json de configuração do "User" do vs code. 
