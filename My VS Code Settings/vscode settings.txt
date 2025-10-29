@@ -7,7 +7,6 @@
     80,
     120
   ],
-  "window.customTitleBarVisibility": "never",
   "extensions.ignoreRecommendations": true,
   "typescript.tsserver.log": "off",
   "files.associations": {
@@ -17,11 +16,13 @@
   },
   "symbols.files.associations": {
     "*.module.ts": "nest",
+    "*.service.ts": "typescript",
     "*.guard.ts": "typescript",
     "*.spec.ts": "ts-test",
     "*.e2e-spec.ts": "ts-test",
     "vitest.config.e2e.ts": "vite",
-    ".env.example": "gear"
+    ".env.example": "gear",
+    ".env.prod": "gear"
   },
   "tailwindCSS.experimental.classRegex": [
     [
@@ -29,6 +30,14 @@
       "[\"'`]([^\"'`]*).*?[\"'`]"
     ]
   ],
+  // "background.fullscreen": {
+  //   "images": ["file:///C:/Users/since/Documents/backvscode.jpg"],
+  //   "opacity": 0.21,
+  //   "size": "cover",
+  //   "position": "center",
+  //   "interval": 0,
+  //   "random": false
+  // },
   "editor.parameterHints.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "cSpell.language": "en,pt",
@@ -38,17 +47,18 @@
   "gitlens.codeLens.recentChange.enabled": false,
   "terminal.integrated.showExitAlert": false,
   "[prisma]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "typescript.suggest.autoImports": true,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
   "terminal.integrated.profiles.linux": {
-      "zsh": {
-          "path": "/usr/bin/zsh"
-      }
-  },  
+    "zsh": {
+      "path": "/usr/bin/zsh"
+    }
+  },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.tabs.title": "fish",
@@ -101,11 +111,11 @@
   "editor.tabSize": 2,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "files.exclude": {
-    "**\/CVS": true,
-    "**\/.DS_Store": true,
-    "**\/.hg": true,
-    "**\/.svn": true,
-    "**\/.git": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/.git": true,
     ".vscode": true
     // "node_modules": true
   },
@@ -117,7 +127,6 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "window.commandCenter": false,
   "git.openRepositoryInParentFolders": "always",
   "symbols.hidesExplorerArrows": false,
   "[javascript]": {
@@ -165,6 +174,12 @@
     "tailwind.config.js": "tailwind.config*, postcss.config*",
     ".env.local": ".env*",
     ".env": ".env*"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
   },
   "explorer.fileNesting.enabled": true,
   "cSpell.userWords": [
@@ -231,7 +246,6 @@
     "Usuario",
     "WEBPUSH"
   ],
-  "workbench.colorTheme": "Pitch Black",
   "workbench.statusBar.visible": false,
   "editor.wordWrap": "on",
   "apc.electron.titleBarStyle": "hidden",
@@ -274,4 +288,34 @@
   "workbench.layoutControl.enabled": false,
   "editor.inlayHints.enabled": "off",
   "workbench.startupEditor": "none",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "chat.commandCenter.enabled": false,
+  "window.commandCenter": false,
+  "editor.formatOnPaste": true,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.formatOnSave.enabled": true,
+  "redhat.telemetry.enabled": true,
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Min Dark",
+  "C_Cpp.default.compilerPath": "c:\\msys64\\ucrt64\\bin\\gcc.exe",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "background.enabled": true,
+  "editor.formatOnSave": true,
+  "codetogether.userName": "since",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "gitlens.ai.model": "gitkraken",
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash"
 }
